@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>GGC19</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        .bgimg {
+            background-image: url('coronariovid-3.jpg');
+            min-height: 100%;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .about-section {
+            padding: 50px;
+            text-align: center;
+            /*background-color: #474e5d;*/
+            color: white;
+            height: 200px;
+        }
+
+        .footer-section {
+            padding: 50px;
+            text-align: left;
+            /*background-color: #474e5d;*/
+            color: white;
+            height: 200px;
+        }
+
+        .button {
+            background-color: rgba(108, 108, 108, 0.3);
+            color: white;
+            border: 2px solid #e7e7e7;
+            border-radius: 10px;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 4px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: white;
+            color:rgba(108, 108, 108, 0.3);
+        }
+
+        /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+        @media screen and (min-width: 601px) {
+            .main-section {
+                padding: 50px;
+                padding-top: 40px;
+                text-align: left;
+                /*background-color: #474e5d;*/
+                color: white;
+                height: 400px;
+            }
+
+            .text {
+                margin: auto;
+                width: 60%;
+                /*border: 3px solid green;*/
+                padding: 10px;
+                display: none;
+            }
+        }
+
+        /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+        @media screen and (max-width: 600px) {
+            .main-section {
+                padding: 0px;
+                text-align: left;
+                /*background-color: #474e5d;*/
+                color: white;
+                height: 400px;
+            }
+
+            .text {
+                margin: auto;
+                width: 80%;
+                /*border: 3px solid green;*/
+                padding: 10px;
+                display: none;
+            }
+        }
+    
+    </style>
+</head>
+
+<body>
+
+    <div class="bgimg w3-animate-opacity">
+        <div class="about-section">
+            <h1>GGC19</h1>
+            <h4>Generatore di Gomplotti Covid-19</h4>
+        </div>
+
+        <div class="main-section">
+            <div class="text" id="text">
+                <p id="first">Il Corona virus è stato creato da i poteri forti per distrarci dalle prove inconfutabili che la terra è piatta.</p>
+                <p id="second">E si trasmette attraverso le scie chimiche!Io lo so perchè l'ha detto mio cugino che lavora nel campo.</p>
+                <div style="margin-top: 40px;">
+                    <hr class="w3-border-grey" style="margin:auto; width:40%;padding: 20px;">
+                </div>
+            </div>
+            <div class="w3-center">
+                <button class="button " onclick="getTheory()">GENERA UNA NUOVA TEORIA!</button>
+            </div>
+        </div>
+
+        <div class="footer-section">
+        </div>
+</div>
+
+
+<script>
+
+    var chi = [
+    'un laboratorio cinese',
+    'l\'esercito americano',
+    'i poteri forti',
+    'i poteri forti',
+    'Bill Gates',
+    'gli scienziati',
+    'la Russia',
+    'la NASA',
+    'la Merkel',
+    'la Lega',
+    'il PD',
+    'i rettiliani',
+    'i poteri forti',
+    'il Vaticano',
+    'i comunisti',
+    'le lobby gay',
+    'Greta Thunberg',
+    'i Rothschild',
+    'l\'azienda dell\'Amuchina',
+    'Dark web',
+    'il Deep State',
+    'Big Pharma',
+    'Thrump',
+    'Mark Zuckerberg',
+    'Jeff Bezos',
+    'Elon Musk',
+    'Thrump',
+    'esercito cinese',
+    'la massoneria'
+    ];
+
+    var perche = [
+    'distrarci dalle prove inconfutabili che la terra e\' piatta',
+    'decimare la popolazione mondiale',
+    'accrescere i propri interessi economici',
+    'distruggere l\'Italia',
+    'finanziare il terrorismo internazionale',
+    'far fallire il mercato',
+    'creare una specie ibrida',
+    'far passare inosservato il 5G',
+    'riportare in auge la civiltà perduta di Atlantide',
+    'evoluzione della specie',
+    'avere accesso ai nostri dati',
+    'arricchire Big Pharma',
+    'riportarci sulla retta via',
+    'indebolire il Movimento 5 Stelle',
+    'rendere la vaccinazione obbligatoria',
+    'difendere la Russia',
+    'abolire il reddito di cittadinanza',
+    'provare l\'esistenza degli alieni',
+    'usare i malati come cavie',
+    'farci diventare atei',
+    'promuovere l\'ideologia gender',
+    'costringerci a collaborare con loro',
+    'venderci gli smarphone che ci controllano',
+    'attaccare la Cina',
+    'incrementare le vendite di Amuchina',
+    'incrementare le vendite di Amazon',
+    'eliminare gli anziani',
+    'controllare le menti',
+    'non farci sapere la verita\' sull\'11 settembre',
+    'testare armi chimiche',
+    'far arricchire le ONG',
+    'metterci gli uni contro gli altri',
+    'far arricchire Fabio Fazio',
+    'far arricchire Burioni',
+    'aumentare l\'utilizzo di pesticidi',
+    'aumentare il valore dei Bitcoin',
+    'non vogliono che si scopra la verita\' su Nikola Tesla'
+    ];
+
+    var come = [
+    'le scie chimiche',
+    'il buco nell\'ozono',
+    'il pensiero',
+    'la webcam nei nostri computer',
+    'le radiazioni del 5G',
+    'i telefonini',
+    'i cinesi',
+    'i migranti',
+    'i topi',
+    'l\'acqua non potabile',
+    'l\'aqua del rubinetto',
+    'le particelle di metalli pesanti',
+    'i vaccini',
+    'gli antibiotici',
+    'i raggi UV',
+    'la forza gravitazionale',
+    'la sodomia',
+    'i microcip che ci hanno impiantato',
+    'i ragni violino',
+    'gli OGM',
+    'le parole del premier',
+    'i farmaci da banco',
+    'l\'etere',
+    'gli insetti robotici',
+    'le catastrofi naturali',
+    'il vento solare',
+    'la fibra ottica',
+    'le radiazioni di Chernobyl',
+    'il ciclo del carbonio',
+    'le strette di mano',
+    'i trasmettitori radio',
+    'i forni a micronde',
+    'dei dispositivi progettati dall\'esercito americano',
+    'i droni del governo'
+    ];
+
+    var prova = [
+    'l\'ha detto Burioni in TV',
+    'l\'ha detto mio cugino che lavora nel campo',
+    'e\' logico che sia cosi\'',
+    'non puoi provare che non sia cosi\'',
+    'conosco qualcuno con gli agganci',
+    'ho parlato con Dio',
+    'me l\'ha detto mia nonna in sogno',
+    'l\'ha detto Barbara d\'Urso in TV',
+    'e\' scritto nei libri della Massoneria',
+    'le prove non lasciano alcun dubbio',
+    'ho letto un articolo a riguardo',
+    'lo dicono anche i medici',
+    'lo dice la TV',
+    'gli Egizi lo avevano predetto',
+    'i Maya lo avevano predetto',
+    'sono trapelati dei documenti'
+    ];
+
+    var finale = [
+    'FATE GIRARE!!!1!11!',
+    'DIFFONDETE1!!!',
+    'NON VOGLIONO CHE SI SAPPIA!',
+    'Incredibile!!',
+    'Sono indignatoooo!!1!',
+    'DA NON CREDERCI',
+    'CONDIVIDI SE SEI INDIGNATO',
+    'SONO INDINNIATOOO1!!!11',
+    'E ADESSO COME LA METTIAMO??!',
+    'SIAMO LA MAGGIORANZA SILENZIOSA',
+    'CI DEVONO DELLE SPIEGAZIONII!!!'
+    ];
+
+    function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min) ) + min;
+    }
+
+
+    function getTheory() {
+        var testo = document.getElementById("text");
+        first = document.getElementById("first");
+        second = document.getElementById("second");
+        
+        testo.style.display = "none";
+            
+        who = chi[getRndInteger(0, chi.length)];
+        why = perche[getRndInteger(0, perche.length)];
+        how = come[getRndInteger(0, come.length)];
+        proof = prova[getRndInteger(0, prova.length)];
+        final = finale[getRndInteger(0, finale.length)];
+
+        first.innerText = 'Il Corona virus e\' stato creato da ' + who + " per " + why + '. E si trasmette attraverso '+ how + '! Io lo so perche\' '+proof+'!'
+        second.innerText = final;
+            
+        testo.style.display = "block";
+    }
+</script>
+
+</body>
